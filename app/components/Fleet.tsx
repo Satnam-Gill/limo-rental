@@ -104,7 +104,7 @@ export default function Fleet({ className = "" }: { className?: string }) {
 
   return (
     <section
-      className={`relative py-20 min-h-[100vh] bg-gradient-to-br from-[#232526] via-[#414345] to-[#FFD70011] flex items-center justify-center overflow-hidden ${className}`}
+      className={`relative  py-20 md:min-h-[100vh] bg-gradient-to-br from-[#232526] via-[#414345] to-[#FFD70011] flex items-center justify-center overflow-hidden ${className}`}
       id="fleet"
     >
       {/* Vignette overlays */}
@@ -114,7 +114,7 @@ export default function Fleet({ className = "" }: { className?: string }) {
         <div className="absolute inset-0 bg-gradient-to-tr from-yellow-100/10 via-transparent to-yellow-400/10 mix-blend-lighten" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
+      <div className="relative z-10  max-w-7xl mx-auto px-4 w-full">
         <h2 className="text-5xl font-extrabold text-center mb-14 text-white drop-shadow-lg tracking-tight uppercase">
           Our Luxury Fleet
         </h2>
