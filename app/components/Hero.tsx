@@ -72,7 +72,7 @@ export default function Hero({ className = "" }: { className?: string }) {
           </a>
         </div>
         {/* Right: Modern Horizontal Snap Carousel */}
-        <div className="flex-1 flex flex-col items-center justify-center w-full max-w-xl">
+        <div className="flex-1 hidden md:flex flex-col items-center justify-center w-full max-w-xl">
           <div className="relative w-full flex items-center justify-center mb-6">
             {/* Arrow left */}
             <button
