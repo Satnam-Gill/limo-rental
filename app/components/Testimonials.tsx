@@ -39,9 +39,9 @@ export default function Testimonials({ className = "" }: { className?: string })
               style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.17), 0 0 0 2px var(--primary-light)' }}
             >
               {/* Gold floating quote icon */}
-              <span className="absolute -top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[var(--primary)] via-[var(--primary-light)] to-[var(--primary)] text-black text-3xl font-bold px-5 py-2 rounded-full shadow-md z-10 border border-[var(--primary-light)]">
+              {/* <span className="absolute -top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[var(--primary)] via-[var(--primary-light)] to-[var(--primary)] text-black text-3xl font-bold px-3 py-0.5 rounded-full shadow-md z-10 border border-[var(--primary-light)]">
                 “
-              </span>
+              </span> */}
               <div className="flex mb-3 mt-2">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <span key={i} className="text-[var(--primary)] text-2xl drop-shadow">★</span>

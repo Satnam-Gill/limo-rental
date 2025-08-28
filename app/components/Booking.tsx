@@ -61,6 +61,7 @@ export default function Booking({ className = "" }: { className?: string }) {
             </select>
             <input
               type="date"
+              defaultValue={new Date().toISOString().split('T')[0]}
               className="px-4 py-3 rounded-xl bg-black/30 border border-white/20 placeholder-white/70 focus:ring-4 focus:ring-[color:var(--primary)]/40 focus:border-[color:var(--primary)] outline-none transition [color-scheme:dark]"
             />
             <input
