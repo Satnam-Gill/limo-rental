@@ -40,7 +40,7 @@ const services = [
       "Travel to your favorite sporting events in style with our transportation services. Whether it’s a Houston Astros game, Rockets match, or another major event, we provide safe and convenient transportation for groups of any size. Skip the parking hassle and let our chauffeurs handle everything, so you can focus on enjoying the game.",
   },
   {
-    title: "Weddings – Bachelor/Bachelorette, Getaway Car",
+    title: "Weddings – Bachelor / Bachelorette, Getaway Car",
     link: "/services/wedding-transportation",
     image: "https://ik.imagekit.io/h7rza8886p/24%20hour%20Limo%20Rental/Mercedes%20Executive%20Shuttle%20Van.jpg?updatedAt=1755857560773",
     description:

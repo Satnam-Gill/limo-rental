@@ -60,7 +60,7 @@ export default function FleetPage() {
         />
 
         {/* Search and Filter Section */}
-        <section className="py-8 md:py-12 bg-gray-50/80 dark:bg-white/5 backdrop-blur-sm">
+        <section className="py-8 md:py-12 bg-white/5 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-4 md:gap-6 items-center justify-between">
               {/* Search */}
@@ -71,9 +71,9 @@ export default function FleetPage() {
                     placeholder="Search"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/80 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-2xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/60 backdrop-blur-xl focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)] focus:border-transparent"
+                    className="w-full px-4 md:px-6 py-3 md:py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-white/60 backdrop-blur-xl focus:outline-none focus:ring-2 focus:ring-[color:var(--primary)] focus:border-transparent"
                   />
-                  <svg className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
@@ -86,7 +86,7 @@ export default function FleetPage() {
                   className={`px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${
                     selectedCategory === "all"
                       ? "bg-[color:var(--primary)] text-black shadow-lg"
-                      : "bg-white/80 dark:bg-white/10 text-gray-700 dark:text-white border border-gray-300 dark:border-white/20 hover:bg-white dark:hover:bg-white/20"
+                      : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
                   }`}
                 >
                   All Vehicles
@@ -98,7 +98,7 @@ export default function FleetPage() {
                     className={`px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold transition-all duration-200 text-sm md:text-base ${
                       selectedCategory === category.id
                         ? "bg-[color:var(--primary)] text-black shadow-lg"
-                        : "bg-white/80 dark:bg-white/10 text-gray-700 dark:text-white border border-gray-300 dark:border-white/20 hover:bg-white dark:hover:bg-white/20"
+                        : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
                     }`}
                   >
                     {category.name}
@@ -110,17 +110,17 @@ export default function FleetPage() {
         </section>
 
         {/* Fleet Grid */}
-        <section className="py-12 md:py-16 bg-gradient-to-br from-gray-100 via-gray-200 to-yellow-100/50 dark:from-[#232526] dark:via-[#414345] dark:to-[#FFD70011]">
+        <section className="py-12 md:py-16 bg-gradient-to-br from-[#232526] via-[#414345] to-[#FFD70011]">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {filteredVehicles.map((vehicle: Vehicle, index: number) => (
                 <div
                   key={vehicle.id}
                   onClick={() => handleVehicleClick(vehicle)}
-                  className="group bg-white/90 dark:bg-black/60 backdrop-blur-xl border border-[color:var(--primary)]/40 rounded-3xl shadow-2xl p-4 md:p-6 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_0_32px_8px_var(--primary)] hover:border-[color:var(--primary)]"
+                  className="group bg-black/60 backdrop-blur-xl border border-[color:var(--primary)]/40 rounded-3xl shadow-2xl p-4 md:p-6 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_0_32px_8px_var(--primary)] hover:border-[color:var(--primary)]"
                 >
                   <div className="relative mb-4 md:mb-6">
-                    <div className="w-full h-40 md:h-48 relative rounded-2xl overflow-hidden shadow-lg border-4 border-[color:var(--primary)] bg-gray-200 dark:bg-black/30">
+                    <div className="w-full h-40 md:h-48 relative rounded-2xl overflow-hidden shadow-lg border-4 border-[color:var(--primary)] bg-black/30">
                       <Image
                         src={vehicle.image}
                         alt={vehicle.name}
@@ -136,11 +136,11 @@ export default function FleetPage() {
                     </div>
                   </div>
                   
-                  <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-3 text-gray-900 dark:text-white leading-tight uppercase tracking-wide">
+                  <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-3 text-white leading-tight uppercase tracking-wide">
                     {vehicle.name}
                   </h3>
                   
-                  <p className="text-gray-700 dark:text-white/90 text-sm md:text-base mb-3 md:mb-4 ">
+                  <p className="text-white/90 text-sm md:text-base mb-3 md:mb-4 ">
                     {vehicle.description}
                   </p>
                   
@@ -153,7 +153,7 @@ export default function FleetPage() {
             
             {filteredVehicles.length === 0 && (
               <div className="text-center py-12 md:py-16">
-                <div className="text-gray-600 dark:text-white/60 text-lg md:text-xl mb-4">No vehicles found</div>
+                <div className="text-white/60 text-lg md:text-xl mb-4">No vehicles found</div>
                 <button
                   onClick={() => {
                     setSelectedCategory("all");
@@ -169,18 +169,18 @@ export default function FleetPage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-12 md:py-16 bg-gray-50/80 dark:bg-white/5 backdrop-blur-sm">
+        <section className="py-12 md:py-16 bg-white/5 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Why Choose Our Fleet?</h2>
-              <p className="text-gray-700 dark:text-white/80 text-base md:text-lg max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Fleet?</h2>
+              <p className="text-white/80 text-base md:text-lg max-w-3xl mx-auto">
                 Experience the highest standards of luxury transportation with our premium fleet
               </p>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="text-center p-4 md:p-6 bg-white/80 dark:bg-white/5 rounded-2xl border border-gray-200 dark:border-white/10 backdrop-blur-sm">
+                <div key={index} className="text-center p-4 md:p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-[color:var(--primary)] rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                     <svg className="w-6 h-6 md:w-8 md:h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       {feature.icon === "shield" && (
@@ -194,8 +194,8 @@ export default function FleetPage() {
                       )}
                     </svg>
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-700 dark:text-white/80 text-sm md:text-base">{feature.description}</p>
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-2">{feature.title}</h3>
+                  <p className="text-white/80 text-sm md:text-base">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -226,13 +226,13 @@ export default function FleetPage() {
       {/* Vehicle Detail Modal */}
       {selectedVehicle && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-black/90 border border-[color:var(--primary)]/40 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-black/90 border border-[color:var(--primary)]/40 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-4 md:p-6">
               <div className="flex justify-between items-start mb-4 md:mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white pr-4">{selectedVehicle.name}</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-white pr-4">{selectedVehicle.name}</h2>
                 <button
                   onClick={closeModal}
-                  className="text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white text-2xl p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition-colors flex-shrink-0"
+                  className="text-white/60 hover:text-white text-2xl p-2 hover:bg-white/10 rounded-full transition-colors flex-shrink-0"
                 >
                   ×
                 </button>
@@ -251,12 +251,12 @@ export default function FleetPage() {
                 <div className="space-y-4 md:space-y-6">
                   <div>
                     <h3 className="text-lg md:text-xl font-bold text-[color:var(--primary)] mb-2">Capacity</h3>
-                    <p className="text-gray-700 dark:text-white/90">{selectedVehicle.capacity}</p>
+                    <p className="text-white/90">{selectedVehicle.capacity}</p>
                   </div>
                   
                   <div>
                     <h3 className="text-lg md:text-xl font-bold text-[color:var(--primary)] mb-2">Description</h3>
-                    <p className="text-gray-700 dark:text-white/90">{selectedVehicle.description}</p>
+                    <p className="text-white/90">{selectedVehicle.description}</p>
                   </div>
                   
                   <div>
@@ -265,7 +265,7 @@ export default function FleetPage() {
                       {selectedVehicle.features.map((feature, idx) => (
                         <span
                           key={idx}
-                          className="px-2 md:px-3 py-1 md:py-2 bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white/80 rounded-full border border-gray-200 dark:border-white/20 text-sm"
+                          className="px-2 md:px-3 py-1 md:py-2 bg-white/10 text-white/80 rounded-full border border-white/20 text-sm"
                         >
                           {feature}
                         </span>

@@ -1,13 +1,13 @@
-import { FaShieldAlt, FaStar, FaClock, FaSmile } from "react-icons/fa";
+import { FaShieldAlt, FaStar, FaClock, FaSmile, FaWifi } from "react-icons/fa";
 
 const promises = [
   {
-    icon: <FaShieldAlt className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
+    icon: <FaSmile className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
     title: "Professional Chauffeurs",
     desc: "Our professionally trained and attired chauffeurs ensure timely, smooth, and comfortable rides in clean, well-maintained vehicles.",
   },
   {
-    icon: <FaStar className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
+    icon: <FaShieldAlt className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
     title: "Safety First",
     desc: "We carry full commercial insurance and a valid operating permit for your peace of mind.",
   },
@@ -17,22 +17,21 @@ const promises = [
     desc: " Receive updates on driver arrival and passenger drop-offs.",
   },
   {
-    icon: <FaSmile className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
+    icon: <FaStar className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
     title: "Luxurious Fleet",
     desc: "Our fleet is meticulously maintained, offering a variety of vehicles to suit your needs.",
   },
   {
-    icon: <FaSmile className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
+    icon: <FaWifi className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
     title: "Complimentary Wi-Fi",
     desc: "Stay connected with free Wi-Fi in all our vehicles.",
   },
   {
-    icon: <FaSmile className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
+    icon: <FaClock className="text-[var(--primary)] text-3xl mb-2 drop-shadow-lg" />,
     title: "24/7 Availability",
-    desc: "We’re always ready to provide reliable and luxurious transportation, any time of day or night.",
+    desc: "We're always ready to provide reliable and luxurious transportation, any time of day or night.",
   },
 ];
-
 export default function OurPromise({ className = "" }: { className?: string }) {
   return (
     <section
